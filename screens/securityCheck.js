@@ -54,14 +54,12 @@ export default ({ navigation, route }) => {
         fontFamily: "Lato_400Regular",
         fontSize: RFValue(18, 812)
       }} onChangeText={code => {
-          setSecurityCode(code)
-          setSecurityCode((state) => {
-            if (state.length === 6) {
-                setValidCode(true)
-            } else {
-                setValidCode(false)
-            }
-        })
+        setSecurityCode(code)
+        if (code.length === 6) {
+            setValidCode(true)
+        } else {
+            setValidCode(false)
+        }
       }}/>
         <StyledButton disabled={validCode ? false: true} title="Submit" backgroundColor="#473BF0" pressedColor="#3129A8" onPress={() => {
             console.log(securityCode)
