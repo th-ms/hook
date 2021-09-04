@@ -16,7 +16,6 @@ export default ({ navigation, route }) => {
     
     const [phoneNumber, setPhoneNumber] = useState("");
     const [countryCode, setCountryCode] = useState("");
-    const [formattedValue, setFormattedValue] = useState("");
     const [valid, setValid] = useState(false);
     const phoneInput = useRef(null);
 
@@ -54,14 +53,17 @@ export default ({ navigation, route }) => {
             defaultValue={phoneNumber}
             defaultCode="US"
             layout="second"
+            countryPickerProps={{
+                countryCodes: ['US']
+            }}
+            countryPickerButtonStyle={{
+                display: "none"
+            }}
             onChangeCountry={(text) => {
                 setCountryCode(text);
             }}
             onChangeText={(text) => {
                 setPhoneNumber(text);
-            }}
-            onChangeFormattedText={(text) => {
-                setFormattedValue(text);
             }}
             withDarkTheme
             containerStyle={{
@@ -75,13 +77,15 @@ export default ({ navigation, route }) => {
             textContainerStyle={{
                 backgroundColor: 'rgba(71,59,24,0)',
                 fontFamily: "Lato_400Regular",
+                paddingLeft: RFValue(24, 812)
             }}
         />
         <StyledButton title="Submit" backgroundColor="#473BF0" pressedColor="#3129A8" onPress={() => {
-            let numberCheck = new RegExp('^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$');
-            console.log(numberCheck.test(phoneNumber))
-            setValid(numberCheck.test(phoneNumber) ? true : false)
-            console.log(valid, phoneNumber)
+            const checkValid = phoneInput.current?.isValidNumber(phoneNumber);
+            setValid(checkValid ? true : false);
+            setValid((state) => {
+                // Access state here
+            })
 
         }}/>
     </KeyboardAwareScrollView>

@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
+import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 // Custom Component Imports
 import StyledButton from "../components/StyledButton";
 // SVG Imports
