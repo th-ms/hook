@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import hookScreen from './screens/loginScreen';
 import signUpScreen from './screens/signUpScreen';
 import userExists from './screens/userExists';
+import securityCheck from './screens/securityCheck';
 
 import {
   useFonts,
@@ -49,6 +50,7 @@ export default function App() {
         <Stack.Navigator screenOptions={{
           headerShown: false
         }}>
+          <Stack.Screen name="securityCheck" component={securityCheck} />
           <Stack.Screen name="hookScreen" component={hookScreen} />
           <Stack.Screen name="userExists" component={userExists} />
           <Stack.Screen name="signUpScreen" component={signUpScreen} />

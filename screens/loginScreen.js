@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Text, Dimensions, ScrollView, Platform } from "react-native";
+import { Text, Dimensions } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 // Custom Component Imports

@@ -8,7 +8,7 @@ function StyledButton (props) {
 
     var [pressed, setPressed] = useState(false);
 
-    const { onPress, title = 'Save', backgroundColor, pressedColor} = props;
+    const { onPress, title = 'Save', backgroundColor, pressedColor, disabled} = props;
     const styles = StyleSheet.create({
         btn: {
           alignItems: 'center',
@@ -21,6 +21,18 @@ function StyledButton (props) {
           height: RFValue(64, 812),
           backgroundColor,
         },
+        btnDisabled: {
+            alignItems: 'center',
+            justifyContent: 'center',
+            paddingVertical: 12,
+            paddingHorizontal: 32,
+            borderRadius: 32,
+            elevation: 3,
+            width: RFValue(288, 812),
+            height: RFValue(64, 812),
+            backgroundColor: "#C7C4FA",
+            opacity: 50
+          },
         btnPressed: {
             alignItems: 'center',
             justifyContent: 'center',
@@ -41,7 +53,16 @@ function StyledButton (props) {
         },
     });
     return (
-        <Pressable onPress={ onPress } style={ pressed ? styles.btnPressed : styles.btn} onPressIn={() => {
+        <Pressable disabled={disabled} onPress={ onPress } style={() => {
+            if (disabled) {
+                return styles.btnDisabled
+            } else if (pressed) {
+                return styles.btnPressed
+            } else {
+                return styles.btn
+            }
+        } 
+        } onPressIn={() => {
             setPressed(true);
         }} onPressOut={() => {
             setPressed(false);
