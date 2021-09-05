@@ -63,11 +63,11 @@ export default ({ navigation, route }) => {
     <Text style={{
         color: "#FFFFFF",
         position: "absolute",
-        fontSize: RFValue(40, 812),
+        fontSize: RFValue(35, 812),
         fontFamily: 'Lato_700Bold',
         textAlign: "center",
         width: width,
-        top: RFPercentage(10)
+        top: RFPercentage(11)
     }}>Tell us about yourself!</Text>
     <View style={dropdownViewStyle}>
     <RNPickerSelect
