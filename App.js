@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import AppLoading  from 'expo-app-loading';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import hookScreen from './screens/loginScreen';
-import signUpScreen from './screens/signUpScreen';
-import userExists from './screens/userExists';
-import securityCheck from './screens/securityCheck';
+import React, { useState } from "react";
+import AppLoading from "expo-app-loading";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import hookScreen from "./screens/loginScreen";
+import signUpScreen from "./screens/signUpScreen";
+import userExists from "./screens/userExists";
+import securityCheck from "./screens/securityCheck";
+import imageSelect from "./screens/imageSelect";
 
 import {
   useFonts,
@@ -19,12 +20,11 @@ import {
   Lato_700Bold_Italic,
   Lato_900Black,
   Lato_900Black_Italic,
-} from '@expo-google-fonts/lato';
+} from "@expo-google-fonts/lato";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-
   const [date, setDate] = useState(new Date());
   const [value, setValue] = useState("");
   const [formattedValue, setFormattedValue] = useState("");
@@ -43,17 +43,36 @@ export default function App() {
   });
 
   if (!fontsLoaded) {
-    return <AppLoading/>;
+    return <AppLoading />;
   } else {
     return (
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{
-          headerShown: false
-        }}>
-          <Stack.Screen options={{ gestureEnabled: false }} name="hookScreen" component={hookScreen} />
-          <Stack.Screen options={{ gestureEnabled: false }} name="securityCheck" component={securityCheck} />
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+          <Stack.Screen
+            options={{ gestureEnabled: false }}
+            name="hookScreen"
+            component={hookScreen}
+          />
+          <Stack.Screen
+            options={{ gestureEnabled: false }}
+            name="securityCheck"
+            component={securityCheck}
+          />
           <Stack.Screen name="userExists" component={userExists} />
-          <Stack.Screen options={{ gestureEnabled: false }} name="signUpScreen" component={signUpScreen} />
+          <Stack.Screen
+            options={{ gestureEnabled: false }}
+            name="signUpScreen"
+            component={signUpScreen}
+          />
+          <Stack.Screen
+            options={{ gestureEnabled: true }}
+            name="imageSelect"
+            component={imageSelect}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     );
