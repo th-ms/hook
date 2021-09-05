@@ -53,7 +53,7 @@ export default function App() {
           <Stack.Screen options={{ gestureEnabled: false }} name="hookScreen" component={hookScreen} />
           <Stack.Screen options={{ gestureEnabled: false }} name="securityCheck" component={securityCheck} />
           <Stack.Screen name="userExists" component={userExists} />
-          <Stack.Screen name="signUpScreen" component={signUpScreen} />
+          <Stack.Screen options={{ gestureEnabled: false }} name="signUpScreen" component={signUpScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );

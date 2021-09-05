@@ -17,7 +17,7 @@ export default ({ navigation, route }) => {
   const [phoneNumber, setPhoneNumber] = useState(route.params.phoneNumber);
   const phoneInput = useRef(null);
   const [date, setDate] = useState(new Date())
-  const [formattedDate, setFormattedDate] = useState(((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '/' + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '/' + date.getFullYear())
+  const [formattedDate, setFormattedDate] = useState();
   const [open, setOpen] = useState(false);
   const showDatePicker = () => {
     setOpen(true);
@@ -26,7 +26,8 @@ export default ({ navigation, route }) => {
     setOpen(false);
   };
   const handleConfirm = (date) => {
-    console.warn("A date has been picked: ", date);
+    setDate(date)
+    setFormattedDate(((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '/' + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '/' + date.getFullYear())
     hideDatePicker();
   };
 
@@ -104,13 +105,13 @@ export default ({ navigation, route }) => {
       fontFamily: "Lato_400Regular",
       fontSize: RFValue(18, 812)
     }}/> */}
-    <StyledButton title="Birthday" backgroundColor='rgba(71,59,240,0.06)' pressedColor="rgba(71,59,240,0.06)" btnStyle={{
+    <StyledButton title={formattedDate ? formattedDate : 'Birthday'} backgroundColor='rgba(71,59,240,0.06)' pressedColor="rgba(71,59,240,0.06)" btnStyle={{
       borderRadius: 12,
       paddingLeft: RFPercentage(3),
       marginBottom: RFValue(45, 812),
       alignItems: 'stretch',
     }} txtStyle={{
-      color: 'rgba(0, 0, 0, 0.25)',
+      color: formattedDate ? '#000000' : 'rgba(0, 0, 0, 0.25)',
       fontSize: RFValue(18, 812)
     }} onPress={showDatePicker} />
     <DateTimePickerModal
