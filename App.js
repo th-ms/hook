@@ -25,9 +25,6 @@ import {
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [date, setDate] = useState(new Date());
-  const [value, setValue] = useState("");
-  const [formattedValue, setFormattedValue] = useState("");
 
   let [fontsLoaded] = useFonts({
     Lato_100Thin,
