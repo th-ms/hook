@@ -7,6 +7,7 @@ import signUpScreen from "./screens/signUpScreen";
 import userExists from "./screens/userExists";
 import securityCheck from "./screens/securityCheck";
 import imageSelect from "./screens/imageSelect";
+import aboutScreen from "./screens/aboutScreen";
 
 import {
   useFonts,
@@ -69,6 +70,11 @@ export default function App() {
             options={{ gestureEnabled: true }}
             name="imageSelect"
             component={imageSelect}
+          />
+          <Stack.Screen
+            options={{ gestureEnabled: true }}
+            name="aboutScreen"
+            component={aboutScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>
