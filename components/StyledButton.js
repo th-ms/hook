@@ -8,25 +8,27 @@ function StyledButton (props) {
 
     var [pressed, setPressed] = useState(false);
 
-    const { onPress, title = 'Save', backgroundColor, pressedColor, disabled} = props;
+    const { onPress, title = 'Save', backgroundColor, pressedColor, disabled, btnStyle, txtStyle} = props;
     const styles = StyleSheet.create({
         btn: {
-          alignItems: 'center',
-          justifyContent: 'center',
-          paddingVertical: 12,
-          paddingHorizontal: 32,
-          borderRadius: 32,
-          elevation: 3,
-          width: RFValue(288, 812),
-          height: RFValue(64, 812),
-          backgroundColor,
-        },
-        btnDisabled: {
-            alignItems: 'center',
+            ...btnStyle,
+            alignItems: btnStyle?.alignItems ? btnStyle.alignItems : 'center',
             justifyContent: 'center',
             paddingVertical: 12,
             paddingHorizontal: 32,
-            borderRadius: 32,
+            borderRadius: btnStyle?.borderRadius ? btnStyle.borderRadius : 32,
+            elevation: 3,
+            width: RFValue(288, 812),
+            height: RFValue(64, 812),
+            backgroundColor,
+        },
+        btnDisabled: {
+            ...btnStyle,
+            alignItems: btnStyle?.alignItems ? btnStyle.alignItems : 'center',
+            justifyContent: 'center',
+            paddingVertical: 12,
+            paddingHorizontal: 32,
+            borderRadius: btnStyle?.borderRadius ? btnStyle.borderRadius : 32,
             elevation: 3,
             width: RFValue(288, 812),
             height: RFValue(64, 812),
@@ -34,22 +36,24 @@ function StyledButton (props) {
             opacity: 50
           },
         btnPressed: {
-            alignItems: 'center',
+            ...btnStyle,
+            alignItems: btnStyle?.alignItems ? btnStyle.alignItems : 'center',
             justifyContent: 'center',
             paddingVertical: 12,
             paddingHorizontal: 32,
-            borderRadius: 32,
+            borderRadius: btnStyle?.borderRadius ? btnStyle.borderRadius : 32,
             elevation: 3,
             width: RFValue(288, 812),
             height: RFValue(64, 812),
             backgroundColor: pressedColor,
         },
         text: {
-          fontSize: RFValue(24, 812),
-          lineHeight: 21,
-          fontFamily: 'Lato_400Regular',
-          letterSpacing: 0.25,
-          color: 'white',
+            ...txtStyle,
+            fontSize:  txtStyle?.fontSize ? txtStyle.fontSize : RFValue(24, 812),
+            lineHeight: 21,
+            fontFamily: 'Lato_400Regular',
+            letterSpacing: 0.25,
+            color: txtStyle?.color ? txtStyle.color : 'white',
         },
     });
     return (

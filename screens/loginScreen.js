@@ -2,8 +2,8 @@ import React, { useRef, useState } from "react";
 import { Text, Dimensions } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
-// Custom Component Imports
 import PhoneInput from 'react-native-phone-number-input';
+// Custom Component Imports
 import StyledButton from '../components/StyledButton';
 // SVG Imports
 import PhoneWaves from '../assets/phoneWaves.svg';
@@ -64,6 +64,8 @@ export default ({ navigation, route }) => {
             }}
             onChangeText={(text) => {
                 setPhoneNumber(text);
+                let numberCheck = new RegExp('^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$');
+                setValid(numberCheck.test(text) ? true : false);
             }}
             withDarkTheme
             containerStyle={{
@@ -77,16 +79,11 @@ export default ({ navigation, route }) => {
             textContainerStyle={{
                 backgroundColor: 'rgba(71,59,24,0)',
                 fontFamily: "Lato_400Regular",
-                paddingLeft: RFValue(24, 812)
+                paddingLeft: RFValue(24, 812),
             }}
         />
-        <StyledButton title="Submit" backgroundColor="#473BF0" pressedColor="#3129A8" onPress={() => {
-            const checkValid = phoneInput.current?.isValidNumber(phoneNumber);
-            setValid(checkValid ? true : false);
-            setValid((state) => {
-                // Access state here
-            })
-
+        <StyledButton disabled={valid ? false: true} title="Submit" backgroundColor="#473BF0" pressedColor="#3129A8" onPress={() => {
+            navigation.push("securityCheck", { phoneNumber });
         }}/>
     </KeyboardAwareScrollView>
 )}
