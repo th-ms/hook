@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { View, Text, TextInput, Dimensions } from "react-native";
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 import PhoneInput from 'react-native-phone-number-input';
-import DatePicker from 'react-native-date-picker'
+import DateTimePickerModal from "react-native-modal-datetime-picker";
 // Custom Component Imports
 import StyledButton from '../components/StyledButton';
 // SVG Imports
@@ -13,10 +13,22 @@ const height = Dimensions.get('window').height;
 
 export default ({ navigation, route }) => {
   
+  
   const [phoneNumber, setPhoneNumber] = useState(route.params.phoneNumber);
   const phoneInput = useRef(null);
   const [date, setDate] = useState(new Date())
-  const [open, setOpen] = useState(false)
+  const [formattedDate, setFormattedDate] = useState(((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '/' + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '/' + date.getFullYear())
+  const [open, setOpen] = useState(false);
+  const showDatePicker = () => {
+    setOpen(true);
+  };
+  const hideDatePicker = () => {
+    setOpen(false);
+  };
+  const handleConfirm = (date) => {
+    console.warn("A date has been picked: ", date);
+    hideDatePicker();
+  };
 
   return (
   <View style={{
@@ -100,10 +112,14 @@ export default ({ navigation, route }) => {
     }} txtStyle={{
       color: 'rgba(0, 0, 0, 0.25)',
       fontSize: RFValue(18, 812)
-    }} onPress={() => {
-      setOpen(true)
-    }} />
-    <DatePicker date={date} onDateChange={setDate} />
+    }} onPress={showDatePicker} />
+    <DateTimePickerModal
+        isVisible={open}
+        mode="date"
+        isDarkModeEnabled={true}
+        onConfirm={handleConfirm}
+        onCancel={hideDatePicker}
+      />
     <StyledButton title="Sign Up" backgroundColor="#473BF0" pressedColor="#3129A8" onPress={() => {
       navigation.push('hookScreen')
     }}/>
