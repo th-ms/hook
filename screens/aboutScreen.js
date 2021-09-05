@@ -106,7 +106,7 @@ export default ({ navigation, route }) => {
     />
     </View>
     <StyledButton disabled={(gender && preference && goal) ? false: true} title="Continue" backgroundColor="#473BF0" pressedColor="#3129A8" onPress={() => {
-        navigation.push("path to picture page");
+        navigation.push("imageSelect");
     }}/>
     </View>
 )}
