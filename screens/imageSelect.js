@@ -11,6 +11,9 @@ const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
 
 export default ({ navigation, route }) => {
+  const { gender, preference, goal, name, birthday, phoneNumber } =
+    route.params;
+  console.log({ gender, preference, goal, name, birthday, phoneNumber });
   const initialState = { count: 0 };
   function reducer(state, action) {
     switch (action.type) {

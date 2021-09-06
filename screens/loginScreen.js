@@ -105,7 +105,7 @@ export default ({ navigation, route }) => {
         backgroundColor="#473BF0"
         pressedColor="#3129A8"
         onPress={() => {
-          navigation.push("imageSelect", { phoneNumber });
+          navigation.push("securityCheck", { phoneNumber });
         }}
       />
     </KeyboardAwareScrollView>
