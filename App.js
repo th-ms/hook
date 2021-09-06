@@ -8,6 +8,7 @@ import userExists from "./screens/userExists";
 import securityCheck from "./screens/securityCheck";
 import imageSelect from "./screens/imageSelect";
 import aboutScreen from "./screens/aboutScreen";
+import generateAvatar from "./screens/generateAvatar";
 
 import {
   useFonts,
@@ -75,6 +76,11 @@ export default function App() {
             options={{ gestureEnabled: true }}
             name="aboutScreen"
             component={aboutScreen}
+          />
+          <Stack.Screen
+            options={{ gestureEnabled: false }}
+            name="generateAvatar"
+            component={generateAvatar}
           />
         </Stack.Navigator>
       </NavigationContainer>
