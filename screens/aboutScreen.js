@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import RNPickerSelect from "react-native-picker-select";
 import { Text, Dimensions, TextInput, View } from "react-native";
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
+import Icon from "react-native-vector-icons/FontAwesome";
 // Custom Component Imports
 import StyledButton from "../components/StyledButton";
 // SVG Imports
@@ -15,7 +16,21 @@ export default ({ navigation, route }) => {
   const [gender, setGender] = useState("");
   const [preference, setPreference] = useState("");
   const [goal, setGoal] = useState("");
+  const symbols={
+    "male":"mars",
+    "female":"venus",
+    "other":"genderless",
+    "all":"transgender",
+    "friend":"user",
+    "relationship":"heart",
+    "hookup":"glass"
+  }
 
+  const iconStyle = {
+    position:"absolute",
+    top: RFValue(15,812),
+    left: RFValue(240,812)
+  }
   const dropdownViewStyle = {
     alignItems: "center",
     justifyContent: "center",
@@ -88,6 +103,11 @@ export default ({ navigation, route }) => {
             { label: "Other", value: "other" },
           ]}
         />
+      <Icon 
+          style={iconStyle}
+          name={symbols[gender]}
+          size={RFValue(30,812)}
+      />
       </View>
       <View style={dropdownViewStyle}>
         <RNPickerSelect
@@ -100,6 +120,11 @@ export default ({ navigation, route }) => {
             { label: "All", value: "all" },
           ]}
         />
+      <Icon 
+          style={iconStyle}
+          name={symbols[preference]}
+          size={RFValue(30,812)}
+      />
       </View>
       <View style={dropdownViewStyle}>
         <RNPickerSelect
@@ -112,6 +137,11 @@ export default ({ navigation, route }) => {
             { label: "Hookup", value: "hookup" },
           ]}
         />
+      <Icon 
+          style={iconStyle}
+          name={symbols[goal]}
+          size={RFValue(30,812)}
+      />
       </View>
       <StyledButton
         disabled={gender && preference && goal ? false : true}
