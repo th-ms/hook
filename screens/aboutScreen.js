@@ -2,9 +2,9 @@ import React, { useRef, useState } from "react";
 import RNPickerSelect from "react-native-picker-select";
 import { Text, Dimensions, TextInput, View } from "react-native";
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
+import Icon from "react-native-vector-icons/FontAwesome";
 // Custom Component Imports
 import StyledButton from "../components/StyledButton";
-import Icon from "react-native-vector-icons/FontAwesome";
 // SVG Imports
 import TopWaves from "../assets/topWaves.svg";
 
