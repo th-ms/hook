@@ -11,7 +11,7 @@ import Icon from "react-native-vector-icons/Ionicons";
 // Custom Component Imports
 import StyledButton from "../components/StyledButton";
 // SVG Imports
-import TopWaves from "../assets/topWaves.svg";
+import TopWaves from "../assets/topWaves2.svg";
 
 const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
@@ -38,26 +38,22 @@ export default ({ navigation, route }) => {
       bounces={false}
       extraHeight={120}
     >
-      <TopWaves
-        width={width}
-        height={height}
+       <TopWaves
+        height={height/2}
         style={{
+          bottom: height/1.4,
           position: "absolute",
-          left: 0,
-          right: 0,
-          bottom: 0,
         }}
       />
       <Text
         style={{
           color: "#FFFFFF",
-          fontSize: RFValue(48, 812),
+          fontSize: RFPercentage(6),
           fontFamily: "Lato_700Bold",
-          top: RFValue(80, 812),
+          bottom: height/1.2,
           position: "absolute",
         }}
       >
-        {" "}
         You legit? 🤔️
       </Text>
       <Text

@@ -1,11 +1,11 @@
 import React, { useReducer } from "react";
 import { View, Text, Dimensions } from "react-native";
-import { RFValue } from "react-native-responsive-fontsize";
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 // Custom Component Imports
 import StyledButton from "../components/StyledButton";
 import ImageSelector from "../components/ImageSelector";
 // SVG Imports
-import TopWaves from "../assets/topWaves.svg";
+import TopWaves from "../assets/topWaves2.svg";
 
 const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
@@ -35,21 +35,18 @@ export default ({ navigation, route }) => {
       }}
     >
       <TopWaves
-        width={width}
-        height={height}
+        height={height/2}
         style={{
+          bottom: height/1.5,
           position: "absolute",
-          left: 0,
-          right: 0,
-          bottom: 0,
         }}
       />
       <Text
         style={{
           color: "#FFFFFF",
-          fontSize: RFValue(36, 812),
+          fontSize: RFPercentage(5),
           fontFamily: "Lato_700Bold",
-          top: RFValue(80, 812),
+          bottom: height/1.2,
           position: "absolute",
         }}
       >

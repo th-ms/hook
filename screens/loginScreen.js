@@ -37,17 +37,12 @@ export default ({ navigation, route }) => {
         height={height}
         style={{
           position: "absolute",
-          left: 0,
-          right: 0,
-          bottom: 0,
         }}
       />
       <Hook
         style={{
+          bottom: height / 1.8,
           position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
         }}
       />
       <Text

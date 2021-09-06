@@ -68,12 +68,12 @@ export default function App() {
             component={signUpScreen}
           />
           <Stack.Screen
-            options={{ gestureEnabled: true }}
+            options={{ gestureEnabled: false }}
             name="imageSelect"
             component={imageSelect}
           />
           <Stack.Screen
-            options={{ gestureEnabled: true }}
+            options={{ gestureEnabled: false }}
             name="aboutScreen"
             component={aboutScreen}
           />

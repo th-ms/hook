@@ -6,7 +6,7 @@ import Icon from "react-native-vector-icons/FontAwesome";
 // Custom Component Imports
 import StyledButton from "../components/StyledButton";
 // SVG Imports
-import TopWaves from "../assets/topWaves.svg";
+import TopWaves from "../assets/topWaves2.svg";
 
 const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
@@ -55,6 +55,7 @@ export default ({ navigation, route }) => {
       marginBottom: RFValue(45, 812),
       fontFamily: "Lato_400Regular",
       fontSize: RFValue(18, 812),
+      color: '#000000',
     },
     placeholder: {
       color: "rgba(0,0,0,.2)",
@@ -70,24 +71,19 @@ export default ({ navigation, route }) => {
       }}
     >
       <TopWaves
-        width={width}
-        height={height}
+        height={height/2}
         style={{
+          bottom: height/1.4,
           position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
         }}
       />
       <Text
         style={{
           color: "#FFFFFF",
-          position: "absolute",
-          fontSize: RFValue(35, 812),
+          fontSize: RFPercentage(5),
           fontFamily: "Lato_700Bold",
-          textAlign: "center",
-          width: width,
-          top: RFPercentage(11),
+          bottom: height/1.2,
+          position: "absolute",
         }}
       >
         Tell us about yourself!

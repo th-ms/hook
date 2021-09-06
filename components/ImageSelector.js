@@ -35,7 +35,7 @@ function ImageSelector(props) {
     <Pressable
       style={{
         aspectRatio: 1,
-        backgroundColor: "rgba(71, 59, 240, 0.06)",
+        backgroundColor: "rgba(244,244,254,255)",
         margin: RFValue(15, 812),
         flex: 1,
         alignItems: "center",
