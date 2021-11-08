@@ -43,15 +43,15 @@ Hook was thought up, designed, and created in a college dorm. The intent was to 
 
 As seen above, Hook development started with mockups created using Figma. With the mockups as a template, the team of developers moved onto recreating the pages in React Native. After going through various libraries to determine the best methods to accomplish various aspects of the signup we ended up with these pages. (All of the following are screenshots taken on a real iPhone through Expo Go.
 
-<img src="https://i.imgur.com/JHw4NyF.png">
-<img src="https://i.imgur.com/o61B7bX.png">
-<img src="https://i.imgur.com/510fGBc.png">
-<img src="https://i.imgur.com/5eD3gsB.png">
-<img src="https://i.imgur.com/EdbzKdd.png">
-<img src="https://i.imgur.com/mXjQRTv.png">
-<img src="https://i.imgur.com/hbdUrLE.png">
-<img src="https://i.imgur.com/3BvfjaX.png">
-<img src="https://i.imgur.com/AU8DGsF.png">
+<img src="https://i.imgur.com/JHw4NyF.png" width=128>
+<img src="https://i.imgur.com/o61B7bX.png" width=128>
+<img src="https://i.imgur.com/510fGBc.png" width=128>
+<img src="https://i.imgur.com/5eD3gsB.png" width=128>
+<img src="https://i.imgur.com/EdbzKdd.png" width=128>
+<img src="https://i.imgur.com/mXjQRTv.png" width=128>
+<img src="https://i.imgur.com/hbdUrLE.png" width=128>
+<img src="https://i.imgur.com/3BvfjaX.png" width=128>
+<img src="https://i.imgur.com/AU8DGsF.png" width=128>
 
 ### Built With
 * [React](https://reactjs.org/)
