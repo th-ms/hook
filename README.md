@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/562041975797317643/907359199330185236/unknown.png">
+  <img src="https://cdn.discordapp.com/attachments/562041975797317643/907359199330185236/unknown.png" width=256>
   <h3 align="center">Hook</h3>
 
   <p align="center">
@@ -37,7 +37,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<video src='https://i.imgur.com/kUIbP6A.mp4'>
+<video src='https://i.imgur.com/kUIbP6A.mp4' width=180 />
 
 Hook was thought up, designed, and created in a college dorm. The intent was to make something competitive with Tinder with different monetization methods. 
 
