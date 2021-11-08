@@ -17,7 +17,7 @@
   </p>
 </p>
 
-![https://imgur.com/tq4CNCZ]
+![Demo GIF](https://imgur.com/tq4CNCZ)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
