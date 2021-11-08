@@ -39,19 +39,20 @@
 
 Hook was thought up, designed, and created in a college dorm. The intent was to make something competitive with Tinder with different monetization methods. 
 
-<img src="https://i.imgur.com/cUt6rVl.png">
+<img src="https://i.imgur.com/cUt6rVl.png" width=1028>
 
 As seen above, Hook development started with mockups created using Figma. With the mockups as a template, the team of developers moved onto recreating the pages in React Native. After going through various libraries to determine the best methods to accomplish various aspects of the signup we ended up with these pages. (All of the following are screenshots taken on a real iPhone through Expo Go.
-
-<img src="https://i.imgur.com/JHw4NyF.png" width=128>
-<img src="https://i.imgur.com/o61B7bX.png" width=128>
-<img src="https://i.imgur.com/510fGBc.png" width=128>
-<img src="https://i.imgur.com/5eD3gsB.png" width=128>
-<img src="https://i.imgur.com/EdbzKdd.png" width=128>
-<img src="https://i.imgur.com/mXjQRTv.png" width=128>
-<img src="https://i.imgur.com/hbdUrLE.png" width=128>
-<img src="https://i.imgur.com/3BvfjaX.png" width=128>
-<img src="https://i.imgur.com/AU8DGsF.png" width=128>
+<p float="left">
+  <img src="https://i.imgur.com/JHw4NyF.png" width=256>
+  <img src="https://i.imgur.com/o61B7bX.png" width=256>
+  <img src="https://i.imgur.com/510fGBc.png" width=256>
+  <img src="https://i.imgur.com/5eD3gsB.png" width=256>
+  <img src="https://i.imgur.com/EdbzKdd.png" width=256>
+  <img src="https://i.imgur.com/mXjQRTv.png" width=256>
+  <img src="https://i.imgur.com/hbdUrLE.png" width=256>
+  <img src="https://i.imgur.com/3BvfjaX.png" width=256>
+  <img src="https://i.imgur.com/AU8DGsF.png" width=256>
+</p>
 
 ### Built With
 * [React](https://reactjs.org/)
