@@ -37,8 +37,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<video src='https://i.imgur.com/kUIbP6A.mp4' width=180 />
-
 Hook was thought up, designed, and created in a college dorm. The intent was to make something competitive with Tinder with different monetization methods. 
 
 <img src="https://i.imgur.com/cUt6rVl.png">
