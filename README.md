@@ -17,7 +17,7 @@
   </p>
 </p>
 
-
+![https://imgur.com/tq4CNCZ]
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -37,7 +37,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="https://imgur.com/tq4CNCZ" width=256>
+
 
 Hook was thought up, designed, and created in a college dorm. The intent was to make something competitive with Tinder with different monetization methods. 
 
