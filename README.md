@@ -7,13 +7,13 @@
   <p align="center">
     A simple dating app written with React Native.
     <br />
-    <a href="https://github.com/th-ms/hook"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/thopay/hook"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     ·
-    <a href="https://github.com/th-ms/hook">Report Bug</a>
+    <a href="https://github.com/thopay/hook">Report Bug</a>
     ·
-    <a href="https://github.com/th-ms/hook">Request Feature</a>
+    <a href="https://github.com/thopay/hook">Request Feature</a>
   </p>
 </p>
 
@@ -86,7 +86,7 @@ Note: If the phone is stuck on opening project or isn't loading, try changing th
 ## Roadmap
 * Development is currently on hold as we have not had enough spare time to dedicate towards continuing this project
 
-See the [open issues](https://github.com/th-ms/hook/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/thopay/hook/issues) for a list of proposed features (and known issues).
 
 
 
@@ -115,4 +115,4 @@ Distributed under the MIT License.
 
 Thomas - [@th___mas](https://twitter.com/th___mas) - contact@th-mas.dev
 
-Project Link: [https://github.com/th-ms/hook](https://github.com/th-ms/hook)
+Project Link: [https://github.com/thopay/hook](https://github.com/thopay/hook)
