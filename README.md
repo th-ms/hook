@@ -73,7 +73,7 @@ To get a local copy up and running follow these simple example steps.
 ### Installation
 1. Clone repo
 ```sh
-git clone https://github.com/th-ms/hook.git
+git clone https://github.com/thopay/hook.git
 ```
 2. In new terminal `npm install`
 3. Run `npm start` (If expo-cli is not installed, follow the terminal prompt to install it)
